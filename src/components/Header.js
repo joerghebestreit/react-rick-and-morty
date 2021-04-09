@@ -1,5 +1,5 @@
 import {BrowserRouter as NavLink} from "react-router-dom";
-import Characters from './components/Characters'
+
 
 export default function Header() {
     return (
