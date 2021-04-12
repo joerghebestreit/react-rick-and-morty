@@ -1,10 +1,10 @@
-import {BrowserRouter as NavLink} from "react-router-dom";
+import {NavLink as NavLink} from "react-router-dom";
 
 
 export default function Header() {
     return (
-        <div>
-            <h1>Rick and Mortey</h1>
+        <div className="Header">
+            <h1>Rick and Morty</h1>
             <NavBar />
         </div> 
     )
@@ -12,9 +12,9 @@ export default function Header() {
 
 function NavBar(){
     return(
-      <nav>
-        <NavLink exact to="/">Home</NavLink>
-        <NavLink to="/Characters">Characters</NavLink>
-      </nav>
+        <nav className="nav">
+            <NavLink className="NavLink1" exact to="/">Home</NavLink>
+            <NavLink className="NavLink2" exact to="/character">Characters</NavLink>
+        </nav>
     )
   }
