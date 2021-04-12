@@ -1,0 +1,31 @@
+import {useState, useEffect} from 'react';
+import {useHistory, useParams} from 'react-router-dom';
+
+export default function SingleCharacter({ name, image, status, species, gender }) {
+    
+
+    const {id} = useParams();
+    const history = useHistory();
+    const [character, setCharacter] = useState({});
+
+    useEffect(() => {
+        const url = `https://rickandmortyapi.com/api/character/${id}`;
+        
+        fetch(url)
+            .then((res) => res.json())
+            .then((apiData) => {
+                setCharacter(apiData);
+            });
+    }, [id]);
+
+    return (
+        <div className="singleCharacter">
+            <h3>{character.name}</h3>
+            <img src={character.image} alt={name} />
+            <li>{character.status}</li>
+            <li>{character.species}</li>
+            <li>{character.gender}</li>
+            <button onClick={() => history.goBack()}> Back </button>
+        </div>
+    )
+}

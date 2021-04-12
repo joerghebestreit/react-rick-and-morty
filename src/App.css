@@ -1,8 +1,78 @@
 .App {
-  height: 100vh;
   display: grid;
-  place-items: center;
   color: #04b1c5;
   background-color: #111440;
-  font-size: 2em;
+  place-items: center;
+}
+
+.NavLink {
+  margin: 20px;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Home {
+  align-items: center;
+  justify-content: center;
+}
+
+.NavLink1 {
+  padding: 30px;
+  color: #04b1c5;
+}
+
+.NavLink2 {
+  color: #04b1c5;
+}
+
+.Footer {
+  font-size: medium;
+}
+
+.nav {
+  padding: 10px;
+}
+
+.characterCardAive {
+  background-color: rgb(18, 169, 207);
+  padding: 10px;
+  margin: 15px;
+  font-size: x-large;
+  text-align: center;
+}
+
+.characterCardDead {
+  background-color: rgba(92, 93, 110, 0.815);
+  padding: 10px;
+  margin: 15px;
+  font-size: x-large;
+  text-align: center;
+}
+.characterCardUnknown {
+  background-color: rgb(27, 93, 216);
+  padding: 10px;
+  margin: 15px;
+  font-size: x-large;
+  text-align: center;
+}
+
+.characterList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.characterList2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
 }
